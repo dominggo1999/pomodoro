@@ -1,0 +1,46 @@
+{
+  "name": "@acme/nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "pnpm with-env next build",
+    "start": "pnpm with-env next start",
+    "clean": "rm -rf .next .turbo node_modules",
+    "dev": "pnpm with-env next dev",
+    "lint": "SKIP_ENV_VALIDATION=1 next lint",
+    "type-check": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --",
+    "generate-pwa-asset": "node scripts/pwa-asset-generator.mjs"
+  },
+  "dependencies": {
+    "@acme/tailwind-config": "*",
+    "@acme/type-utils": "*",
+    "@acme/ui": "*",
+    "@next/font": "^13.1.6",
+    "@tanstack/react-query": "^4.20.4",
+    "next": "^13.1.1",
+    "next-pwa": "^5.6.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "autoprefixer": "^10.4.13",
+    "dotenv-cli": "^6.0.0",
+    "eslint": "^8.30.0",
+    "eslint-config-next": "^13.1.1",
+    "postcss": "^8.4.19",
+    "pwa-asset-generator": "^6.2.1",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "next/core-web-vitals"
+    ]
+  }
+}
